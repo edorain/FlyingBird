@@ -1,0 +1,85 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://3y4a3pvuvy0w"]
+
+[ext_resource type="Texture2D" uid="uid://hkxaapwa5rn5" path="res://Art/NicePng_raven-png_316257.png" id="1_uspic"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ioys"]
+atlas = ExtResource("1_uspic")
+region = Rect2(1242, 0, 147, 205)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ae0v"]
+atlas = ExtResource("1_uspic")
+region = Rect2(1449, 0, 147, 205)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4m5u"]
+atlas = ExtResource("1_uspic")
+region = Rect2(1656, 0, 147, 205)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gip6l"]
+atlas = ExtResource("1_uspic")
+region = Rect2(0, 0, 147, 205)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei21b"]
+atlas = ExtResource("1_uspic")
+region = Rect2(207, 0, 147, 205)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi12r"]
+atlas = ExtResource("1_uspic")
+region = Rect2(414, 0, 147, 205)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gouir"]
+atlas = ExtResource("1_uspic")
+region = Rect2(621, 0, 147, 205)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_at8oe"]
+atlas = ExtResource("1_uspic")
+region = Rect2(828, 0, 147, 205)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldw14"]
+atlas = ExtResource("1_uspic")
+region = Rect2(1035, 0, 147, 205)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ioys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ae0v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4m5u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gip6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ei21b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xi12r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gouir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_at8oe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldw14")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ioys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gouir")
+}],
+"loop": true,
+"name": &"glide",
+"speed": 1.0
+}]

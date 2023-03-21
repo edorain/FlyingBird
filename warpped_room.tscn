@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://8ss8ij56gos0"]
+
+[ext_resource type="PackedScene" uid="uid://bad3kkyd3s8yd" path="res://Bird.tscn" id="1_nb03x"]
+[ext_resource type="Script" path="res://Script/warpped_room.gd" id="1_pp2wt"]
+
+[node name="WarppedRoom" type="Node2D" node_paths=PackedStringArray("warpable_obj")]
+editor_description = "I need to make a flying bird.
+
+So it will be control with WASD
+
+No landing mode for now.
+Start with flying right
+
+The brid will slowly fall.
+Press and hold movement button to flap
+Turning from right to left will have slow down
+
+The bird would be velocity based
+
+State:
+1. Gliding
+2. Turning
+3. Flapping
+4. Soaring
+5. Diving"
+script = ExtResource("1_pp2wt")
+warpable_obj = NodePath("Bird")
+
+[node name="Bird" parent="." instance=ExtResource("1_nb03x")]
+position = Vector2(422, 275)
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Bird"]
+
+[node name="DebugNode" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 60.0
+offset_top = 61.0
+offset_right = 100.0
+offset_bottom = 101.0
+
+[node name="Label" type="Label" parent="DebugNode"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[connection signal="screen_exited" from="Bird/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

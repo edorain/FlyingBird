@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bad3kkyd3s8yd"]
+
+[ext_resource type="SpriteFrames" uid="uid://3y4a3pvuvy0w" path="res://Art/BirdSpriteSheet.tres" id="1_j31c7"]
+[ext_resource type="Script" path="res://Script/BirdMain.gd" id="1_svq8i"]
+[ext_resource type="Script" path="res://Script/AnimatedSprite2D.gd" id="3_jjojg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0cv33"]
+radius = 7.42432
+
+[sub_resource type="GDScript" id="GDScript_r6sxa"]
+script/source = "extends Node
+class_name Gliding
+var lift = 1
+var SPEED = 300
+
+"
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_svq8i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(3.781, 3.781)
+shape = SubResource("CircleShape2D_0cv33")
+
+[node name="StateMachine" type="Node" parent="."]
+
+[node name="Gliding" type="Node" parent="StateMachine"]
+script = SubResource("GDScript_r6sxa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(9.53674e-07, 2.38419e-07)
+scale = Vector2(0.666667, 0.666667)
+sprite_frames = ExtResource("1_j31c7")
+animation = &"glide"
+autoplay = "default"
+offset = Vector2(-18, -6)
+script = ExtResource("3_jjojg")
